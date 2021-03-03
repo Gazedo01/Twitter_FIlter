@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+	<html lang="pt-BR">
+		<head>
+			<title>Twitter FIlter</title>
+			<meta charset="UTF-8"/>
+			<hr>
+		</head>
+		<body>
+			<input type="text">
+			{% for tweet in results %}
+				<ul>
+					<li>
+						{{tweet.text}}
+					</li>	
+				</ul>
+			{% endfor %}
+			<style>
+			</style>
+		</body>
