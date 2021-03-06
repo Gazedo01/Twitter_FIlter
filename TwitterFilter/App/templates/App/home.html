@@ -6,14 +6,18 @@
 			<hr>
 		</head>
 		<body>
-			<input type="text">
-			{% for tweet in results %}
-				<ul>
-					<li>
-						{{tweet.text}}
-					</li>	
-				</ul>
-			{% endfor %}
+			<table border="10">
+				<tr style="text-align: center;">
+					<td>Nome</td>
+					<td>tweet</td>
+					<td>Data</td>
+				</tr>
+				<tr {% for tweet in results %}>
+					<td>{{tweet.user.name}}</td>
+					<td>{{tweet.text}}</td>
+					<td>{{tweet.created_at}}</td>
+				</tr {% endfor %}>
+			</table>
 			<style>
 			</style>
 		</body>
